@@ -1,0 +1,5 @@
+.DS_Store
+projects/node_modules
+projects/ng2app/node_modules
+projects/ng2app/dist
+projects/ng2app/.vscode

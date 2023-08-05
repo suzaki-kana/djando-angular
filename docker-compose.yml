@@ -1,0 +1,20 @@
+version: '3'
+services:
+  node:
+    build: ./docker
+    ports:
+      - "8000:8000"
+      - "4200:4200"
+    volumes:
+      - "./projects:/work/projects"
+    tty: true
+
+  db:
+    image: mysql:8.0
+    ports:
+      - 63306:3306
+    environment:
+      MYSQL_DATABASE: database
+      MYSQL_ROOT_PASSWORD: P@ssw0rd
+      MYSQL_USER: user
+      MYSQL_PASSWORD: P@ssw0rd
